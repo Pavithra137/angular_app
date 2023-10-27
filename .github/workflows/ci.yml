@@ -21,6 +21,7 @@ jobs:
           pwd
       - name: Create ZIP file
         run: |
+           apt-get update -y
            apt-get install zip -y
            zip -r  $workspace/dist.zip . 
            
