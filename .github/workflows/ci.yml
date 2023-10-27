@@ -28,7 +28,7 @@ jobs:
     
       - name: Copy artifacts to S3
         run:  |
-            apt-get install awscli
+            apt-get install awscli -y
             aws s3 cp  dist.zip  s3://samplew23/test/
             rm dist.zip 
         
