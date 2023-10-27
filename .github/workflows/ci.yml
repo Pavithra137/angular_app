@@ -24,7 +24,9 @@ jobs:
            apt-get update -y
            apt-get install zip -y
            zip -r  $workspace/dist.zip . 
+           ls -l
            pwd
+           
            
       # - name: Copy artifacts to S3
       #   run:  |
