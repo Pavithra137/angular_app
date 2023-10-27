@@ -18,4 +18,5 @@ jobs:
         run: |
           npm run build
           ls -l
+          pwd
         
