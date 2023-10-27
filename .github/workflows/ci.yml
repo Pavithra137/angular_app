@@ -23,7 +23,7 @@ jobs:
         run: |
            apt-get update -y
            apt-get install zip -y
-           zip -r  $workspace/dist.zip  $workspace/dist
+           zip -r  dist.zip dist
            ls -l
            pwd
            
