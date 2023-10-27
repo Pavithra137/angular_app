@@ -34,6 +34,7 @@ jobs:
            apt-get install zip -y
            zip -r  dist.zip dist
            ls -l
+           pwd
     
       - name: Copy artifacts to S3
         run:  |
