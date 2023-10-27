@@ -19,4 +19,12 @@ jobs:
           npm run build
           ls -l
           pwd
+      - name: Create ZIP file
+        run: |
+           zip -r  $workspace/dist.zip . 
+           
+      # - name: Copy artifacts to S3
+      #   run:  |
+      #       aws s3 cp  $workspace/api-flyakeed.zip  s3://$ARTIFACTS/${{ github.repository }}/api-flyakeed.zip
+      #       rm  $workspace/api-flyakeed.zip 
         
