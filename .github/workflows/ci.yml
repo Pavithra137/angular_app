@@ -25,11 +25,9 @@ jobs:
            apt-get install zip -y
            zip -r  dist.zip dist
            ls -l
-           pwd
-           
-           
-      # - name: Copy artifacts to S3
-      #   run:  |
-      #       aws s3 cp  $workspace/api-flyakeed.zip  s3://$ARTIFACTS/${{ github.repository }}/api-flyakeed.zip
-      #       rm  $workspace/api-flyakeed.zip 
+    
+      - name: Copy artifacts to S3
+        run:  |
+            aws s3 cp  dist.zip  s3://samplew23/test/
+            rm dist.zip 
         
