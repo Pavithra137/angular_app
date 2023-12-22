@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
          name: my-artifacts
-         path: /docs
+         path: ./docs
         
       - name: Configure AWS Credentials 1
         id: creds
