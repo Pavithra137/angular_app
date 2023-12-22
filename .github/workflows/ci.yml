@@ -71,4 +71,3 @@ jobs:
             apt-get install awscli -y
             aws s3 cp  dist.zip  s3://samplew23/test/
             rm dist.zip 
-        
