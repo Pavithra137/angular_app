@@ -15,6 +15,7 @@ jobs:
         run: |
           apt update -y
           apt install zip -y
+          apt intsall gh -y
           zip -r ./test.zip .
           cp ./test.zip ./docs
      
@@ -23,6 +24,22 @@ jobs:
         with:
          name: my-artifacts
          path: ./docs
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifacts
+          path: my-artifacts
+
+      - name: Publish Package to GitHub Packages
+        run: |
+          # Add commands to publish the zip file to GitHub Packages
+          # For example, using gh CLI:
+          gh extension install actions/gh-actions@v2
+          gh auth login --with-token "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"
+          gh release create v1.0 my-artifacts.zip --notes "Release notes for version 1.0"
+        working-directory: ${{ github.workspace }}
+        
         
       - name: Configure AWS Credentials 1
         id: creds
