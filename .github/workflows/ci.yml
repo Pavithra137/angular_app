@@ -16,6 +16,7 @@ jobs:
           apt update -y
           apt install zip -y
           zip -r ./test.zip .
+          cp ./test.zip ./docs
      
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
