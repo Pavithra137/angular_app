@@ -13,6 +13,8 @@ jobs:
         
       - name: Create ZIP file
         run: |
+          apt update -y
+          apt install zip -y
           zip -r $workspace/test.zip 
      
       - name: Archive Artifacts
