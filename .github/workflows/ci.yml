@@ -15,7 +15,7 @@ jobs:
         run: |
           apt update -y
           apt install zip -y
-          zip -r $workspace/test.zip 
+          zip -r ./test.zip 
      
       - name: Archive Artifacts
         uses: actions/upload-artifact@v2
