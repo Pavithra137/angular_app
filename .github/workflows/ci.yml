@@ -36,7 +36,7 @@ jobs:
           # Add commands to publish the zip file to GitHub Packages
           # For example, using gh CLI:
           gh extension install actions/gh-actions@v2
-          gh auth login --with-token "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"
+          gh auth login --with-token 
           gh release create v1.0 my-artifacts.zip --notes "Release notes for version 1.0"
         working-directory: ${{ github.workspace }}
         
