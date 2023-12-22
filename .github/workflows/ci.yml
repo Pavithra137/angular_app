@@ -15,7 +15,7 @@ jobs:
         run: |
           apt update -y
           apt install zip -y
-          apt intsall gh -y
+          apt install gh -y
           zip -r ./test.zip .
           cp ./test.zip ./docs
      
